@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="pb-5">
+    <div class="topnav">
+      <a class="" href="/">Home</a>
+      <a href="/getUploadFile" class="active">Upload</a>
+    </div>
+    <form
+      class="my-3 d-flex justify-content-center align-items-center flex-column"
+      action="/postUploadSinglePic"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <label for="formFileMultiple" class="form-label fw-bold">
+        Nhập file tại đây
+      </label>
+      <input
+        class="form-control w-50"
+        type="file"
+        id="formFileMultiple"
+        name="profileSinglePic"
+      />
+      <input type="submit" value="Upload 1 file" class="btn btn-primary mt-3" />
+    </form>
+    <form
+      class="my-3 d-flex justify-content-center align-items-center flex-column"
+      action="/postUploadMultiplePic"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <label for="formFileMultiple" class="form-label fw-bold">
+        Nhập file tại đây
+      </label>
+      <input
+        class="form-control w-50"
+        type="file"
+        id="formFileMultiple"
+        multiple
+        name="profileMultiplePic"
+      />
+      <input
+        type="submit"
+        value="Upload nhiều file"
+        class="btn btn-primary mt-3"
+      />
+    </form>
+  </body>
+</html>
